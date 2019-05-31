@@ -1,0 +1,11 @@
+/* 给 body 和 html 设置样式 */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 165, 0);
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
