@@ -5,6 +5,7 @@ import Router from 'vue-router';
 import UserElement from "../components/userElement.vue";
 import Login from "../components/login/login.vue";
 import Home from "../components/home/home.vue";
+import Users from "../components/home/users/users.vue";
 
 Vue.use(Router);
 
@@ -25,6 +26,13 @@ export default new Router({
     {
         path: "/home",
         name: "home",
-        component: Home
-    }]   // 首页的路由
+        component: Home,    // 首页的路由
+        children: [
+            {
+                path: "/users",
+                name: "users",
+                component: Users
+            }   // home 的子路由 users
+        ]
+    }]
 });

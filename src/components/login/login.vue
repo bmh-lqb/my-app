@@ -66,7 +66,8 @@ export default {
 
                                 // 跳转到首页
                                 this.$router.push("/home");
-                                console.log(data);
+
+                                localStorage.setItem("token", data.token);
                             } else {
                                 this.$message({
                                     showClose: true,
@@ -98,7 +99,7 @@ export default {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -80%);
+    transform: translate(-50%, -70%);
     background-color: #fff;
     padding: 20px 40px;
     border-radius: 10px;

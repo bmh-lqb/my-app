@@ -1,6 +1,5 @@
 // 自己封装的一个 axios 插件
 // 导入 Vue
-// eslint-disable-next-line no-unused-vars
 import Vue from "vue";
 
 // 导入 axios
@@ -10,7 +9,7 @@ import axios from "axios";
 let myAxios = {};
 
 // 添加 install 方法
-myAxios.install = function(Vue) {
+myAxios.install = function() {
     // 统一设置请求的 API
     axios.defaults.baseURL = "http://localhost:8888/api/private/v1";
 
