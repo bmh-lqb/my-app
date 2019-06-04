@@ -2,10 +2,11 @@ import Vue from 'vue';
 import Router from 'vue-router';
 
 // 引入 userElement 组件
-import UserElement from "../components/userElement.vue";
 import Login from "../components/login/login.vue";
 import Home from "../components/home/home.vue";
 import Users from "../components/home/users/users.vue";
+import Roles from "../components/home/permission/roles.vue";
+import Rights from "../components/home/permission/rights.vue";
 
 Vue.use(Router);
 
@@ -14,10 +15,6 @@ export default new Router({
         path: "/",
         redirect: "/home"
     },  // 重定向
-    {
-        path: "/userElement",
-        component: UserElement
-    },  // 使用 element-ui 的路由
     {
         path: "/login",
         name: "login",
@@ -32,7 +29,17 @@ export default new Router({
                 path: "/users",
                 name: "users",
                 component: Users
-            }   // home 的子路由 users
+            },   // home 的子路由 users
+            {
+                path: "/roles",
+                name: "roles",
+                component: Roles
+            },   // 添加一个 home 的子路由 roles
+            {
+                path: "/rights",
+                name: "rights",
+                component: Rights
+            }   // 添加一个 home 的子路由 rights
         ]
     }]
 });

@@ -19,11 +19,11 @@
                 <i class="el-icon-apple"></i>
                 <span>权限管理</span>
             </template>
-            <el-menu-item index="roles">
+            <el-menu-item index="/roles">
                 <i class="el-icon-menu"></i>
                 <span>角色列表</span>
             </el-menu-item>
-            <el-menu-item>
+            <el-menu-item index="/rights">
                 <i class="el-icon-menu"></i>
                 <span>权限列表</span>
             </el-menu-item>
@@ -34,15 +34,15 @@
                 <i class="el-icon-pear"></i>
                 <span>商品管理</span>
             </template>
-            <el-menu-item>
+            <el-menu-item index="3-1">
                 <i class="el-icon-menu"></i>
                 <span>商品列表</span>
             </el-menu-item>
-            <el-menu-item>
+            <el-menu-item index="3-2">
                 <i class="el-icon-menu"></i>
                 <span>分类参数</span>
             </el-menu-item>
-            <el-menu-item>
+            <el-menu-item index="3-3">
                 <i class="el-icon-menu"></i>
                 <span>商品分类</span>
             </el-menu-item>
@@ -52,7 +52,7 @@
                 <i class="el-icon-orange"></i>
                 <span>订单管事</span>
             </template>
-            <el-menu-item>
+            <el-menu-item index="4-1">
                 <i class="el-icon-menu"></i>
                 <span>订单列表</span>
             </el-menu-item>
@@ -62,7 +62,7 @@
                 <i class="el-icon-grape"></i>
                 <span>数据统计</span>
             </template>
-            <el-menu-item>
+            <el-menu-item index="5-1">
                 <i class="el-icon-menu"></i>
                 <span>数据报表</span>
             </el-menu-item>

@@ -22,10 +22,10 @@
 
 <script>
 // 引入头部组件
-import Aside from "../home/aside/aside.vue";
+import Aside from "./layout/aside.vue";
 
 // 引入侧边栏组件
-import TopHead from "../home/tophead/tophead.vue";
+import TopHead from "./layout/tophead.vue";
 
 export default {
     // 进入一个组件执行的代码
