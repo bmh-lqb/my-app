@@ -115,7 +115,7 @@
                     next: 下一页
                     jumper: 跳页元素
              -->
-            <el-pagination
+            <!-- <el-pagination
             @size-change="handleSizeChange"
             @current-change="handleCurrentChange"
             :current-page="pagenum"
@@ -123,7 +123,7 @@
             :page-size="pagesize"
             layout="total, sizes, prev, pager, next, jumper"
             :total="pageData.pageSize">
-            </el-pagination>
+            </el-pagination> -->
         </div>
     </el-card>
 </template>
@@ -137,10 +137,8 @@ export default {
         return {
             search: "",
             tableData: [],
-            pageData: {
-                pageNum: 1, // 当前页
-                pageSize: 20 // 页面量
-            },
+            pageNum: 1, // 当前页
+            pageSize: 20, // 页面量
             formObj: {
                 username: "",
                 password: "",
@@ -177,8 +175,8 @@ export default {
             this.$http
                 .get("users", {
                     params: {
-                        pagenum: this.pageData.pageNum,
-                        pagesize: this.pageData.pageSize,
+                        pagenum: this.pageNum,
+                        pagesize: this.pageSize,
                         query: this.search
                     }
                 })

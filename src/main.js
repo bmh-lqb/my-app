@@ -14,9 +14,13 @@ import "./assets/css/index.css";
 // 引入 axios
 import myAxios from "./assets/js/myAxios.js";
 
+// 引入 element-tree-grid
+import TreeGrid from "element-tree-grid";
+
 // 调用 use方法
 Vue.use(ElementUI);
 Vue.use(myAxios);
+Vue.component(TreeGrid.name, TreeGrid); // 定义一个全局组件 tree-grid
 
 Vue.config.productionTip = false;
 
