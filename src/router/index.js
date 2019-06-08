@@ -8,6 +8,10 @@ import Users from "../components/home/users/users.vue";
 import Roles from "../components/home/permission/roles.vue";
 import Rights from "../components/home/permission/rights.vue";
 import Categories from '../components/home/categories/categories.vue';
+import Goods from "../components/home/categories/goods/goods.vue";
+import GoodsAdd from "../components/home/categories/goodsAdd.vue";
+import Reports from "../components/home/reports/reports.vue";
+import Orders from "../components/home/orders/orders.vue";
 
 // 引入 message
 import { Message } from 'element-ui';
@@ -48,6 +52,26 @@ let router = new Router({
                 path: "/categories",
                 name: "categories",
                 component: Categories
+            },
+            {
+                path: "/goods",
+                name: "goods",
+                component: Goods
+            },
+            {
+                path: "/goods/add",
+                name: "goodsAdd",
+                component: GoodsAdd
+            },
+            {
+                path: "/reports",
+                name: "reports",
+                component: Reports
+            },
+            {
+                path: "/orders",
+                name: "orders",
+                component: Orders
             }
         ]
     }]
@@ -57,7 +81,7 @@ let router = new Router({
 router.beforeEach((to, from, next) => {
     // 完成登录逻辑
     // 只要请求的路由不是 login 就需要进行登录验证
-    if (to.path != "login") {
+    if (to.path != "/login") {
         // 判断是否存在 token
         if (!window.localStorage.getItem("token")) {
             Message({

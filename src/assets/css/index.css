@@ -17,6 +17,7 @@ html {
     /*IE10*/
     -ms-user-select: none;
     user-select: none;
+    overflow: hidden;
 }
 
 h1 {

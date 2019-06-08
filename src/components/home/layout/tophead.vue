@@ -47,19 +47,19 @@ export default {
 </script>
 
 <style scoped>
-    .mycol {
-        height: 60px;
-        font-size: 24px;
-    }
+.mycol {
+    height: 60px;
+    font-size: 24px;
+}
 
-    .logout {
-        text-align: right;
-    }
+.logout {
+    text-align: right;
+}
 
-    .logout a {
-        text-decoration: none;
-        color: rgb(255, 115, 0);
-        font-size: 24px;
-        font-weight: bolder;
-    }
+.logout a {
+    text-decoration: none;
+    color: rgb(255, 115, 0);
+    font-size: 24px;
+    font-weight: bolder;
+}
 </style>

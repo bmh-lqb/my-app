@@ -48,41 +48,31 @@ export default {
     methods: {
         login() {
             // 判断 form 表单中的元素是否满足验证条件
-            this.$refs.ruleForm.validate((valid) => {
+            this.$refs.ruleForm.validate(async valid => {
+                // valid boole 值，如果通过返回 true， 否则返回 false
                 if (valid) {
-                    this.$http.post("/login", this.ruleForm)
-                        .then( res => {
-                            // 解构参数
-                            let { data, meta } = res.data;
+                    // 发送登录请求
+                    let res = await this.$http.post('login', this.ruleForm);
+                    let { data, meta } = res.data;
 
-                            // 判断登录状态
-                            if (meta.status == 200) {
-                                // 弹出登录成功提示框
-                                this.$message({
-                                    showClose: true,
-                                    message: meta.msg,
-                                    type: 'success'
-                                });
-
-                                // 跳转到首页
-                                this.$router.push("/home");
-
-                                localStorage.setItem("token", data.token);
-                            } else {
-                                this.$message({
-                                    showClose: true,
-                                    message: '请输入正确的用户名和密码',
-                                    type: 'error'
-                                });
-                                return false;
-                            }
+                    // 判断登录状态
+                    if (meta.status === 200) {
+                        // 提示登录成功
+                        this.$message({
+                            message: meta.msg,
+                            type: 'success'
                         });
+
+                        // 将 登录 中的 token 保存到浏览器中的 localstorage 中
+                        localStorage.setItem('token', data.token);
+
+                        // 路由的跳转，跳转到首页
+                        this.$router.push('/home');
+                    } else {
+                        this.$message.error(meta.msg);
+                    }
                 } else {
-                    this.$message({
-                        showClose: true,
-                        message: '请输入正确的用户名和密码',
-                        type: 'error'
-                    });
+                    this.$message.error('请输入正确的用户名和密码');
                     return false;
                 }
             });

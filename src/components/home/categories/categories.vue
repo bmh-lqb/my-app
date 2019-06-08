@@ -9,7 +9,7 @@
             </el-col>
         </el-row>
         <!--  表格区域 -->
-        <el-table :data="pageList" style="width: 100%">
+        <el-table :data="pageList" style="width: 100%;">
             <el-table-tree-column file-icon="icon icon-file" folder-icon="icon icon-folder" prop="cat_name" label="名称"
                 treeKey="cat_id" parentKey="cat_pid" levelKey="cat_level">
             </el-table-tree-column>

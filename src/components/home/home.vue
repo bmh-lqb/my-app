@@ -11,7 +11,7 @@
                     <Aside />
                 </el-aside>
                 <!-- 内容区域 -->
-                <el-main>
+                <el-main class="my-main">
                     <!-- 添加一个路由 -->
                     <router-view></router-view>
                 </el-main>
@@ -51,6 +51,10 @@ export default {
 <style>
 .mycon {
   height: 100%;
+}
+
+.my-main {
+  height: 887px;
 }
 
 .el-header {

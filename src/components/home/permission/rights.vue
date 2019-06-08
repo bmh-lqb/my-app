@@ -4,7 +4,7 @@
         <!-- 面包屑导航 -->
         <BreadNav :navone="'权限管理'" :navtwo="'权限列表'" />
         <!-- 表格 -->
-        <el-table :data="rightsList" style="width: 100%" :border="true">
+        <el-table :data="rightsList" style="width: 100%;" :border="true">
             <el-table-column type="index">
             </el-table-column>
             <el-table-column prop="authName" label="权限名称" width="180">
